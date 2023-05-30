@@ -42,23 +42,13 @@ def run_alexa():
         if 'hey' in command:
             song=command.replace('hey','')    
             talk('playing'+song)
-            pywhatkit.playonyt(song)
-            
-            
-            # INT BYE BYE COMMAND I WONNA USE THW BREAK BUT BREAK ONLY EXIT IF ELSE CONDITION
-    elif 'bye-bye' or 'bye bye' in command:
-        talk('bye bye, see you soon, have a good day ahead')
-        talk("Just don't say in next listening command na i will get lost")
-        
-        
+            pywhatkit.playonyt(song)    
     elif 'time' in command:
         # UPPER TIME COMMAND SHOWS HM FORMAT
         # time=datetime.datetime.now().strftime('%H:%M')
         time=datetime.datetime.now().strftime('%I:%M %p')
         print(time)
-        talk('Current time is '+ time)
-        
-        #YOU MAY CHANGE NAME FROM DEVRAJ -> ANY NAME OF FRIEND ETC.   
+        talk('Current time is '+ time)  #YOU MAY CHANGE NAME FROM DEVRAJ -> ANY NAME OF FRIEND ETC.   
     elif "who is devraj" in command:
         print("please stop. Don't talk about Devraj Singh")
         talk("please stop. Don't talk about Devraj Singh")
@@ -69,8 +59,7 @@ def run_alexa():
         print("Don't you get it")
         talk("Don't you get it")
         print("by the way he is of my level")
-        talk("by the way he is of my level")
-        
+        talk("by the way he is of my level")  
     elif 'who is' or 'tell me about' in command:
         person= command.replace('who is','')
         person= command.replace('tell me about','')
