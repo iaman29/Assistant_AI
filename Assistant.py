@@ -6,6 +6,7 @@ import datetime
 import wikipedia
 import pyjokes
 
+bye=0
 
 
 listener = sr.Recognizer()
@@ -74,11 +75,17 @@ def run_alexa():
         joke1=pyjokes.get_joke()
         talk(joke1)
         print(joke1)
+    elif 'bye' in command:
+        # joke1=pyjokes.get_joke()
+        talk('bye')
+        print('bye')
+        bye=1
     else:
         talk("Please The Command Again")
         
         
         
+    #way to have bye 
         
-while True:   
+while bye==0:   
     run_alexa()
